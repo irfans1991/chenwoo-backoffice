@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import ButtonNavigation from './button/ButtonNavigation.vue';
-
+defineProps({
+    
+})
 
 </script>
 

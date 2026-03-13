@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import Column from "../../components/column/Column.vue";
 import Header from "../../components/Header.vue";
-import LeftColumn from "../../components/LeftColumn.vue";
-import MainContents from "../../components/MainContents.vue";
 import PageNavigation from "../../components/PageNavigation.vue";
 import BasicInformationContents from "./BasicInformationContents.vue";
 import TagsAndAttributeContents from "./TagsAndAttributeContents.vue";
