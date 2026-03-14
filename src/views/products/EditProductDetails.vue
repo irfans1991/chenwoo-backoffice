@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import Column from "../../components/column/Column.vue";
 import Header from "../../components/Header.vue";
 import PageNavigation from "../../components/PageNavigation.vue";
 import BasicInformationContents from "./BasicInformationContents.vue";
 import TagsAndAttributeContents from "./TagsAndAttributeContents.vue";
+import OrderSpesificationContents from "./OrderSpesificationContents.vue";
 </script>
 
 <template>
@@ -19,11 +21,12 @@ import TagsAndAttributeContents from "./TagsAndAttributeContents.vue";
               <div
                 class="w-8 h-8 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center"
               >
-                <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20">
+                <!-- <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20">
                   <path
                     d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"
                   ></path>
-                </svg>
+                </svg> -->
+                <FontAwesomeIcon icon="fa-solid fa-circle-info" size="lg" />
               </div>
               <h3 class="text-xl font-bold text-slate-900">
                 Basic Information
@@ -40,12 +43,7 @@ import TagsAndAttributeContents from "./TagsAndAttributeContents.vue";
               <div
                 class="w-8 h-8 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center"
               >
-                <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
-                  <path
-                    d="M17.41 7.58l-5-5C12.05 2.22 11.55 2 11 2H6c-1.1 0-2 .9-2 2v5c0 .55.22 1.05.59 1.42l5 5c.36.37.86.58 1.41.58s1.05-.21 1.41-.58l5-5c.37-.36.59-.86.59-1.42 0-.57-.23-1.06-.59-1.42zM6.5 7C5.67 7 5 6.33 5 5.5S5.67 4 6.5 4 8 4.67 8 5.5 7.33 7 6.5 7z"
-                  ></path>
-                  />
-                </svg>
+               <FontAwesomeIcon icon="fa-solid fa-tag" size="lg" />
               </div>
               <h3 class="text-xl font-bold text-slate-900">
                 Tags &amp; Attributes
@@ -56,6 +54,23 @@ import TagsAndAttributeContents from "./TagsAndAttributeContents.vue";
             <TagsAndAttributeContents />
           </template>
         </Column>
+        <column>
+          <template #title-name>
+            <div class="flex items-center gap-3 mb-8">
+              <div
+                class="w-8 h-8 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center"
+              >
+                <FontAwesomeIcon icon="fa-solid fa-box-open" size="lg" />
+              </div>
+              <h3 class="text-xl font-bold text-slate-900">
+                Order Spesifications
+              </h3>
+            </div>
+          </template>
+          <template #main-contents>
+            <OrderSpesificationContents />
+          </template>
+        </column>
       </div>
       <!-- Left Column End -->
     </div>
